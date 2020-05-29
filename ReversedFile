@@ -1,0 +1,40 @@
+# Taking How Many number user want to Emter..
+no=int(input("Enter How Many Number U want to Enter... "))
+
+# Blank List to stored Number
+a=[]
+
+# taking the Number from the user
+#List should be in ascending order
+for _ in range(no):
+    a.append(int(input("Enter Numbers:- ")))
+print("Your sorted list is ",a)
+
+# Copyint the list in new Variable so that it wont effect the Original List
+reversed1=a.copy()
+reversed2=a.copy()
+reversed3=a.copy()
+
+# 1st Reversed Method using inbuilt Function
+reversed1.reverse()
+print(f"Reverse Using inBuilt Function is {a} to {reversed1}")
+
+# 2nd Reversed Method using Slicing
+print(f"Reverse Using Slicing is {a} to {reversed2[::-1]}")
+
+# 3rd reverse method Swapping 1st and the last element
+for i in range(len(reversed3)//2):
+    reversed3[i],reversed3[len(reversed3)-i-1]=reversed3[len(reversed3)-i-1],reversed3[i]
+print(f"Reverse Using Swapping 1st and last element is {a} to {reversed3}")
+
+
+
+
+
+
+
+
+
+
+
+
